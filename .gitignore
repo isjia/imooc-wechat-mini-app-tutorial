@@ -58,6 +58,5 @@ typings/
 .env
 
 # Gitbook
-
 notes/_book/
 gh-pages/
