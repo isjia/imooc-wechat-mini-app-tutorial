@@ -4,7 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "book": "gitbook serve ./notes ./gh-pages",
+    "buildBook": "gitbook build ./notes ./gh-pages",
+    "deployBook": "node ./scripts/deploy-gh-pages.js",
+    "publish": "npm run buildBook && npm run deployBook",
+    "port": "lsof -i :35729"
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/isjia/imooc-wechat-mini-app-tutorial/issues"
   },
-  "homepage": "https://github.com/isjia/imooc-wechat-mini-app-tutorial#readme"
+  "homepage": "https://github.com/isjia/imooc-wechat-mini-app-tutorial#readme",
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  }
 }
