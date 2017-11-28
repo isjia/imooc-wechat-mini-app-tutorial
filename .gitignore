@@ -60,3 +60,6 @@ typings/
 # Gitbook
 notes/_book/
 gh-pages/
+
+# Others
+.DS_Store
