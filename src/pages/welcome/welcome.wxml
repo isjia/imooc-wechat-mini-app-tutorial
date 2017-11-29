@@ -4,7 +4,7 @@
     <image src='/images/avatar.jpg' class="userinfo-avatar"></image>
     <text class="userinfo-nickname">Hello, nickname</text>
   </view>
-  <view class="usermotto">
+  <view class="usermotto" bindtap="onTap">
     <text class="user-motto">开始</text>
   </view>
 </view>

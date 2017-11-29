@@ -9,6 +9,13 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  // tap start button
+  onTap: function() {
+    wx.redirectTo({
+      url: '/pages/post/post',
+    })
+  },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

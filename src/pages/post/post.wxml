@@ -1,0 +1,31 @@
+<view>
+  <swiper indicator-dots='true' autoplay='true' interval='3000' circular='true'>
+    <swiper-item>
+      <image src='/images/item1.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/item2.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/item3.jpg'></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{posts}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+    <view wx:if="{{item.show}}" class='post-item'>
+      <view class='post-meta'>
+        <image class='avatar' src='{{item.avatar}}'></image>
+        <text>{{item.date}}</text>
+      </view>
+      <image src='{{item.cover}}'></image>
+      <text class='desc'>
+         {{item.desc}}
+      </text>
+      <view class='post-kpi'>
+        <image src='/images/icon-star.png'></image>
+        <text>{{item.collection_num}}</text>
+        <image src='/images/icon-view.png'></image>
+        <text>{{item.view_num}}</text>
+      </view>
+    </view>
+  </block>
+</view>
