@@ -1,0 +1,346 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第4章 第二个页面：新闻阅读列表 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="03.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    第1章 什么是微信小程序？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    第2章 小程序环境搭建与开发工具介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    第3章 从一个简单的“欢迎“页面开始小程序之旅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    第4章 第二个页面：新闻阅读列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第4章 第二个页面：新闻阅读列表</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;4&#x7AE0;-&#x7B2C;&#x4E8C;&#x4E2A;&#x9875;&#x9762;&#xFF1A;&#x65B0;&#x95FB;&#x9605;&#x8BFB;&#x5217;&#x8868;">&#x7B2C;4&#x7AE0; &#x7B2C;&#x4E8C;&#x4E2A;&#x9875;&#x9762;&#xFF1A;&#x65B0;&#x95FB;&#x9605;&#x8BFB;&#x5217;&#x8868;</h1>
+<h2 id="4-1-&#x7B2C;&#x56DB;&#x7AE0;&#x8BFE;&#x7A0B;&#x7B80;&#x4ECB;">4-1 &#x7B2C;&#x56DB;&#x7AE0;&#x8BFE;&#x7A0B;&#x7B80;&#x4ECB;</h2>
+<p><strong>&#x7F16;&#x5199;&#x65B0;&#x95FB;&#x9605;&#x8BFB;&#x5217;&#x8868;</strong></p>
+<p>&#x8BB2;&#x89E3;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li>Swiper &#x7EC4;&#x4EF6;</li>
+<li>App.json &#x91CC;&#x7684;&#x5BFC;&#x822A;&#x680F;&#x3001;&#x6807;&#x9898;&#x914D;&#x7F6E;</li>
+<li>Page &#x9875;&#x9762;&#x4E0E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;</li>
+<li>&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF08;&#x6838;&#x5FC3;&#x77E5;&#x8BC6;&#xFF09;</li>
+<li>&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x8FD0;&#x7B97;&#x4E0E;&#x903B;&#x8F91;</li>
+<li>AppData&#x533A;&#x57DF;&#x4ECB;&#x7ECD;</li>
+<li>&#x4E8B;&#x4EF6;&#x4E0E;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#xFF08;&#x6838;&#x5FC3;&#x77E5;&#x8BC6;&#xFF09;</li>
+<li>&#x7F13;&#x5B58;&#xFF08;&#x589E;&#x5F3A;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x5BB9;&#x91CF;&#x9650;&#x5236;5M&#xFF09;</li>
+<li>&#x5217;&#x8868;&#x6E32;&#x67D3;&#xFF08;&#x6838;&#x5FC3;&#x77E5;&#x8BC6;&#xFF09;</li>
+<li>Template&#x6A21;&#x677F;&#x7684;&#x4F7F;&#x7528;&#xFF08;&#x6838;&#x5FC3;&#x77E5;&#x8BC6;&#xFF09;</li>
+</ul>
+<h2 id="4-2-&#x771F;&#x673A;&#x8FD0;&#x884C;&#x5C0F;&#x7A0B;&#x5E8F;&#x53CA;&#x5C0F;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x8005;&#x540E;&#x53F0;&#x7B80;&#x4ECB;">4-2 &#x771F;&#x673A;&#x8FD0;&#x884C;&#x5C0F;&#x7A0B;&#x5E8F;&#x53CA;&#x5C0F;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x8005;&#x540E;&#x53F0;&#x7B80;&#x4ECB;</h2>
+<h2 id="4-3-&#x4F7F;&#x7528;swiper&#x7EC4;&#x4EF6;&#x6784;&#x5EFA;&#x8F6E;&#x64AD;&#x56FE;">4-3 &#x4F7F;&#x7528;Swiper&#x7EC4;&#x4EF6;&#x6784;&#x5EFA;&#x8F6E;&#x64AD;&#x56FE;</h2>
+<p><strong>&#x521B;&#x5EFA;post&#x9875;&#x9762;</strong></p>
+<ul>
+<li>&#x521B;&#x5EFA;post&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x548C;&#x76F8;&#x5173;&#x6587;&#x4EF6;</li>
+<li>&#x6CE8;&#x518C;&#x9875;&#x9762;</li>
+<li><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/component/swiper.html" target="_blank">Swiper&#x7EC4;&#x4EF6;</a></li>
+</ul>
+<h2 id="4-4-&#x6784;&#x5EFA;&#x65B0;&#x95FB;&#x5217;&#x8868;&#xFF08;&#x4E0A;&#xFF09;">4-4 &#x6784;&#x5EFA;&#x65B0;&#x95FB;&#x5217;&#x8868;&#xFF08;&#x4E0A;&#xFF09;</h2>
+<ul>
+<li><a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/config.html" target="_blank">page&#x7684;&#x914D;&#x7F6E;</a></li>
+<li>&#x6587;&#x7AE0;&#x5217;&#x8868;item</li>
+</ul>
+<h2 id="4-5-&#x6784;&#x5EFA;&#x65B0;&#x95FB;&#x5217;&#x8868;&#xFF08;&#x4E0B;&#xFF09;">4-5 &#x6784;&#x5EFA;&#x65B0;&#x95FB;&#x5217;&#x8868;&#xFF08;&#x4E0B;&#xFF09;</h2>
+<ul>
+<li>&#x8BBE;&#x7F6E;&#x9875;&#x9762;&#x7684;css&#x6837;&#x5F0F;&#xFF08;&#x91CD;&#x70B9;&#x719F;&#x6089;flexbox&#x7684;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#xFF09;</li>
+</ul>
+<h2 id="4-6-js&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x4E0E;page&#x9875;&#x9762;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;">4-6 js&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x4E0E;Page&#x9875;&#x9762;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;</h2>
+<p>Page&#x52A0;&#x8F7D;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x6267;&#x884C;&#x7684;&#x76D1;&#x542C;&#x51FD;&#x6570;</p>
+<ul>
+<li>onLoad</li>
+<li>onShow</li>
+<li>onReady</li>
+<li>onHide</li>
+<li>onUnload</li>
+</ul>
+<h2 id="4-7-&#x57FA;&#x7840;">4-7 &#x57FA;&#x7840;</h2>
+<ul>
+<li>&#x5C0F;&#x7A0B;&#x5E8F;&#x5B9E;&#x73B0;&#x7684;&#x662F;&#x5355;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;</li>
+<li>&#x5B9E;&#x73B0;&#x9759;&#x6001;&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;</li>
+</ul>
+<h2 id="4-8-&#x6269;&#x5C55;">4-8 &#x6269;&#x5C55;</h2>
+<ul>
+<li><code>wx:if</code></li>
+<li><code>6</code></li>
+</ul>
+<h2 id="4-9-&#x4F7F;&#x7528;&#x5217;&#x8868;&#x6E32;&#x67D3;wx-for&#x6539;&#x5199;&#x65B0;&#x95FB;&#x5217;&#x8868;">4-9 &#x4F7F;&#x7528;&#x5217;&#x8868;&#x6E32;&#x67D3;wx-for&#x6539;&#x5199;&#x65B0;&#x95FB;&#x5217;&#x8868;</h2>
+<pre><code class="lang-javascript"><span class="hljs-keyword">this</span>.setData({
+  posts: items
+});
+</code></pre>
+<h2 id="4-10-&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x4E8B;&#x4EF6;&#x673A;&#x5236;&#xFF08;&#x5192;&#x6CE1;&#x4E0E;&#x975E;&#x5192;&#x6CE1;&#xFF09;&#x4E0A;">4-10 &#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x4E8B;&#x4EF6;&#x673A;&#x5236;&#xFF08;&#x5192;&#x6CE1;&#x4E0E;&#x975E;&#x5192;&#x6CE1;&#xFF09;&#x4E0A;</h2>
+<ul>
+<li>bindtap</li>
+<li>wx.navigateTo</li>
+<li>wx.redirectTo</li>
+<li>onUnload</li>
+<li>onHide</li>
+</ul>
+<h2 id="4-11-&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x4E8B;&#x4EF6;&#x673A;&#x5236;&#xFF08;&#x5192;&#x6CE1;&#x4E0E;&#x975E;&#x5192;&#x6CE1;&#xFF09;&#x4E0B;">4-11 &#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x4E8B;&#x4EF6;&#x673A;&#x5236;&#xFF08;&#x5192;&#x6CE1;&#x4E0E;&#x975E;&#x5192;&#x6CE1;&#xFF09;&#x4E0B;</h2>
+<ul>
+<li>&#x5192;&#x6CE1;&#x4E8B;&#x4EF6;</li>
+<li>&#x975E;&#x5192;&#x6CE1;&#x4E8B;&#x4EF6;</li>
+<li>&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#xFF1A;catchtap</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第3章 从一个简单的“欢迎“页面开始小程序之旅">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第4章 第二个页面：新闻阅读列表","level":"1.5","depth":1,"previous":{"title":"第3章 从一个简单的“欢迎“页面开始小程序之旅","level":"1.4","depth":1,"path":"03.md","ref":"03.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04.md","mtime":"2017-11-29T14:56:19.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-11-29T14:57:56.472Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
