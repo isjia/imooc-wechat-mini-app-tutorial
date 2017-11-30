@@ -1,0 +1,18 @@
+<template name="postItem">
+  <view wx:if="{{item.show}}" class='post-item'>
+    <view class='post-meta'>
+      <image class='avatar' src='{{item.avatar}}'></image>
+      <text>{{item.date}}</text>
+    </view>
+    <image src='{{item.imgSrc}}'></image>
+    <text class='desc'>
+        {{item.content}}
+    </text>
+    <view class='post-kpi'>
+      <image src='/images/icon-star.png'></image>
+      <text>{{item.collection}}</text>
+      <image src='/images/icon-view.png'></image>
+      <text>{{item.reading}}</text>
+    </view>
+  </view>
+</template>
