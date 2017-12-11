@@ -34,6 +34,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    g_isPlaying: false,
+    g_musicId: null
   }
 })

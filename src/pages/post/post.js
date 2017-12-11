@@ -7,7 +7,25 @@ Page({
   data: {
     items: []
   },
+  /**
+   * 点击一个post
+   */
+  onTapPostItem: function (event) {
+    var id = event.currentTarget.dataset.postId;
+    wx.navigateTo({
+      url: './post-detail/post-detail?postId=' + id,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
 
+  /**
+   * tap an author
+   */
+  onAuthorTap: function (event) {
+    console.log('tap an author');
+  },
   /**
    * 生命周期函数--监听页面加载
    */

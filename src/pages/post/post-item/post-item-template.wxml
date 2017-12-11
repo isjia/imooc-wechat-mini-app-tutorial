@@ -1,13 +1,15 @@
 <template name="postItem">
   <view wx:if="{{item.show}}" class='post-item'>
-    <view class='post-meta'>
+    <view class='post-meta' catchtap='onAuthorTap'>
       <image class='avatar' src='{{item.avatar}}'></image>
       <text>{{item.date}}</text>
     </view>
-    <image src='{{item.imgSrc}}'></image>
-    <text class='desc'>
-        {{item.content}}
-    </text>
+    <view catchtap='onTapPostItem' data-post-id='{{item.postId}}'>
+      <image src='{{item.imgSrc}}'></image>
+      <text class='desc'>
+          {{item.content}}
+      </text>
+    </view>
     <view class='post-kpi'>
       <image src='/images/icon-star.png'></image>
       <text>{{item.collection}}</text>
