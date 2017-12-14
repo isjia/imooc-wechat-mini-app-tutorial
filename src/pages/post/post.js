@@ -26,6 +26,15 @@ Page({
   onAuthorTap: function (event) {
     console.log('tap an author');
   },
+
+  onSwiperTap: function(event) {
+    // target 和 currentTarget，target是指当前点击的组件，currentTarget是指事件捕获的组件
+    var postId = event.target.dataset.postId;
+    wx.navigateTo({
+      url: 'post-detail/post-detail?postId='+postId
+    })
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */

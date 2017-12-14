@@ -36,6 +36,7 @@ App({
   globalData: {
     userInfo: null,
     g_isPlaying: false,
-    g_musicId: null
+    g_musicId: null,
+    doubanBase: 'https://api.douban.com'
   }
 })

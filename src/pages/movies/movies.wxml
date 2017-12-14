@@ -1,0 +1,6 @@
+<import src="./movie-row/movie-row-template" />
+<view>
+  <block wx:for="{{movieLists}}" wx:for-item="movieList">
+    <template is="movieRowTemplate" data="{{movieList}}"/>
+  </block>
+</view>

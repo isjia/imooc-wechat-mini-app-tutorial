@@ -1,0 +1,17 @@
+<import src="../movie/movie-template" />
+<template name="movieRowTemplate">
+  <view class='movies-container'>
+    <view class='movies-header'>
+      <text class='header'>{{movieList.title}}</text>
+      <view class='more'>
+        <text class='more-text'>更多</text>
+        <image class="more-arrow" src="/images/icon-arrow-right.png"></image>
+      </view>
+    </view>
+    <view class='movies'>
+      <block wx:for="{{movieList.movies}}" wx:for-item="item" wx:key="index">
+        <template is="movieTemplate" data="{{...item}}"/>
+      </block>
+    </view>
+  </view>
+</template>

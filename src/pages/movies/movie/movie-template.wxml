@@ -1,0 +1,8 @@
+<import src="../stars/stars-template" />
+<template name="movieTemplate">
+  <view class='movie-container'>
+    <image class="movie-post" src="{{cover}}"></image>
+    <text class='movie-name'>{{name}}</text>
+    <template is="starsTemplate" data="{{stars: stars, average: average}}"/>
+  </view>
+</template>

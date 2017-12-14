@@ -11,8 +11,8 @@ Page({
   },
   // tap start button
   onTap: function() {
-    wx.redirectTo({
-      url: '/pages/post/post',
+    wx.switchTab({
+      url: '/pages/post/post'
     })
   },
 

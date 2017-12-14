@@ -1,0 +1,36 @@
+@import '../movie/movie-template';
+
+.movies-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.movies-header {
+  padding: 30rpx 20rpx 22rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 28rpx;
+  align-items: center;
+  white-space:nowrap;
+}
+
+.more-text {
+  margin-right: 12rpx;
+  color: #405f80;
+  font-weight: 800;
+}
+
+.more-arrow {
+  height: 16rpx;
+  width: 16rpx;
+}
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

@@ -1,13 +1,38 @@
 {
   "pages":[
+    "pages/movies/movies",    
     "pages/welcome/welcome",    
     "pages/post/post",
-    "pages/post/post-detail/post-detail",    
+    "pages/post/post-detail/post-detail",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#405f80",
     "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#405f80",
+    "list": [
+      {
+        "pagePath": "pages/post/post",
+        "text": "文章",
+        "iconPath": "/images/icon-reading.png",
+        "selectedIconPath": "/images/icon-reading-2.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "/images/icon-movie.png",
+        "selectedIconPath": "/images/icon-movie-2.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "/images/icon-log.png",
+        "selectedIconPath": "/images/icon-log-2.png"
+      }
+    ]
   }
 }
