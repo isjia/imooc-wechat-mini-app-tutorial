@@ -1,0 +1,361 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第7章 开始制作电影资讯页面 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="06.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    第1章 什么是微信小程序？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    第2章 小程序环境搭建与开发工具介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    第3章 从一个简单的“欢迎“页面开始小程序之旅
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    第4章 第二个页面：新闻阅读列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    第5章 小程序的模板化与模块化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    第6章 构建新闻详情页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    第7章 开始制作电影资讯页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >第7章 开始制作电影资讯页面</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;7&#x7AE0;-&#x5F00;&#x59CB;&#x5236;&#x4F5C;&#x7535;&#x5F71;&#x8D44;&#x8BAF;&#x9875;&#x9762;">&#x7B2C;7&#x7AE0; &#x5F00;&#x59CB;&#x5236;&#x4F5C;&#x7535;&#x5F71;&#x8D44;&#x8BAF;&#x9875;&#x9762;</h1>
+<h2 id="7-1-banner&#x8F6E;&#x64AD;&#x56FE;&#x8DF3;&#x8F6C;&#x6587;&#x7AE0;&#x8BE6;&#x60C5;">7-1 Banner&#x8F6E;&#x64AD;&#x56FE;&#x8DF3;&#x8F6C;&#x6587;&#x7AE0;&#x8BE6;&#x60C5;</h2>
+<ol>
+<li>&#x94FE;&#x63A5;&#x8F6E;&#x64AD;&#x56FE;&#x5230;&#x6587;&#x7AE0;&#x8BE6;&#x60C5;&#x9875;&#x9762;&#xFF0C;&#x4F7F;&#x7528;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;</li>
+</ol>
+<h2 id="7-2-&#x8865;&#x5145;&#x5185;&#x5BB9;&#xFF1A;tab&#x9009;&#x9879;&#x5361;&#x8BFE;&#x524D;&#x51C6;&#x5907;">7-2 &#x8865;&#x5145;&#x5185;&#x5BB9;&#xFF1A;tab&#x9009;&#x9879;&#x5361;&#x8BFE;&#x524D;&#x51C6;&#x5907;</h2>
+<p>&#x8DF3;&#x8F6C;&#x5230;&#x4E00;&#x4E2A;&#x5E26;tab&#x9009;&#x9879;&#x5361;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528;<code>wx.switchTab</code></p>
+<h2 id="7-3-&#x7ED9;&#x9879;&#x76EE;&#x52A0;&#x5165;tab&#x9009;&#x9879;&#x5361;">7-3 &#x7ED9;&#x9879;&#x76EE;&#x52A0;&#x5165;tab&#x9009;&#x9879;&#x5361;</h2>
+<p>&#x9700;&#x8981;&#x51FA;&#x73B0;tabbar&#x7684;&#x9875;&#x9762;&#xFF0C;&#x8BE5;&#x9875;&#x9762;&#x8DEF;&#x5F84;&#x5FC5;&#x987B;&#x5728;tabbar&#x7684;list&#x5143;&#x7D20;&#x4E2D;&#x3002;</p>
+<h2 id="7-4-&#x5B8C;&#x5584;tab&#x9009;&#x9879;&#x5361;">7-4 &#x5B8C;&#x5584;tab&#x9009;&#x9879;&#x5361;</h2>
+<p>&#x7ED9;&#x9009;&#x9879;&#x5361;&#x6DFB;&#x52A0;icon/selectedIcon&#x3002;</p>
+<h2 id="7-5-&#x8865;&#x5145;&#x5185;&#x5BB9;&#xFF1A;&#x4E3A;&#x4EC0;&#x4E48;redirectto&#x4E0D;&#x51FA;&#x73B0;&#x9009;&#x9879;&#x5361;">7-5 &#x8865;&#x5145;&#x5185;&#x5BB9;&#xFF1A;&#x4E3A;&#x4EC0;&#x4E48;redirectTo&#x4E0D;&#x51FA;&#x73B0;&#x9009;&#x9879;&#x5361;</h2>
+<h2 id="7-6-&#x7535;&#x5F71;&#x9875;&#x9762;&#x5D4C;&#x5957;template&#x5206;&#x6790;">7-6 &#x7535;&#x5F71;&#x9875;&#x9762;&#x5D4C;&#x5957;template&#x5206;&#x6790;</h2>
+<p>3&#x4E2A;&#x5D4C;&#x5957;template&#x5212;&#x5206;&#x7684;&#x5206;&#x6790;</p>
+<h2 id="7-7-3&#x4E2A;&#x5D4C;&#x5957;template&#x6807;&#x7B7E;&#x7684;&#x5B9E;&#x73B0;">7-7 3&#x4E2A;&#x5D4C;&#x5957;template&#x6807;&#x7B7E;&#x7684;&#x5B9E;&#x73B0;</h2>
+<p>template&#x4ECE;&#x6700;&#x5C0F;&#x5355;&#x5143;&#x5F00;&#x59CB;&#x7F16;&#x7801;</p>
+<ul>
+<li>star template</li>
+<li>movie template</li>
+<li>movie-list template</li>
+</ul>
+<h2 id="7-8-stars-template&#x7684;&#x6837;&#x5F0F;&#x5B9E;&#x73B0;">7-8 stars template&#x7684;&#x6837;&#x5F0F;&#x5B9E;&#x73B0;</h2>
+<p>&#x6CE8;&#x610F;&#x5D4C;&#x5957;import wxss&#x6587;&#x4EF6;</p>
+<h2 id="7-9-movie-template&#x7684;&#x6837;&#x5F0F;&#x5B9E;&#x73B0;">7-9 movie template&#x7684;&#x6837;&#x5F0F;&#x5B9E;&#x73B0;</h2>
+<h2 id="7-10-movie-list-template&#x7684;&#x6837;&#x5F0F;&#x5B9E;&#x73B0;">7-10 movie-list template&#x7684;&#x6837;&#x5F0F;&#x5B9E;&#x73B0;</h2>
+<h2 id="7-11-restful-api&#x7B80;&#x4ECB;&#x53CA;&#x8C03;&#x7528;&#x8C46;&#x74E3;api">7-11 RESTful API&#x7B80;&#x4ECB;&#x53CA;&#x8C03;&#x7528;&#x8C46;&#x74E3;API</h2>
+<pre><code class="lang-javascript">wx.request({
+  url: <span class="hljs-string">&apos;https://api.douban.com/v2/movie/coming_soon&apos;</span>,
+  method: <span class="hljs-string">&apos;GET&apos;</span>,
+  header: {
+    <span class="hljs-string">&quot;Content-Type&quot;</span>: <span class="hljs-string">&quot;json&quot;</span>
+  },
+  success: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(res.data.subjects);
+  }
+})
+</code></pre>
+<h2 id="7-12-&#x83B7;&#x53D6;&#x6B63;&#x5728;&#x70ED;&#x6620;&#x3001;&#x5373;&#x5C06;&#x4E0A;&#x6620;&#x548C;top250&#x7684;&#x6570;&#x636E;">7-12 &#x83B7;&#x53D6;&#x6B63;&#x5728;&#x70ED;&#x6620;&#x3001;&#x5373;&#x5C06;&#x4E0A;&#x6620;&#x548C;Top250&#x7684;&#x6570;&#x636E;</h2>
+<h2 id="7-13-&#x7535;&#x5F71;&#x9875;&#x9762;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF08;&#x4E0A;&#xFF09;">7-13 &#x7535;&#x5F71;&#x9875;&#x9762;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF08;&#x4E0A;&#xFF09;</h2>
+<ul>
+<li>&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;api&#x53C2;&#x6570;&#xFF08;start&#xFF0C;count&#xFF09;&#x83B7;&#x53D6;3&#x6761;&#x6570;&#x636E;</li>
+<li>&#x5BF9;&#x83B7;&#x53D6;&#x5230;&#x7684;douban&#x6570;&#x636E;&#x8FDB;&#x884C;&#x9884;&#x5904;&#x7406;</li>
+<li>&#x83B7;&#x53D6;&#x5E76;&#x5B58;&#x50A8;&#x4ECE;api&#x63A5;&#x53E3;&#x53D6;&#x56DE;&#x7684;&#x6570;&#x636E;</li>
+</ul>
+<h2 id="7-14-&#x7535;&#x5F71;&#x9875;&#x9762;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF08;&#x4E0B;&#xFF09;">7-14 &#x7535;&#x5F71;&#x9875;&#x9762;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF08;&#x4E0B;&#xFF09;</h2>
+<h2 id="7-15-&#x661F;&#x661F;&#x8BC4;&#x5206;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x73B0;">7-15 &#x661F;&#x661F;&#x8BC4;&#x5206;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x73B0;</h2>
+<h2 id="7-16-&#x66F4;&#x6362;&#x7535;&#x5F71;&#x5206;&#x7C7B;&#x6807;&#x9898;">7-16 &#x66F4;&#x6362;&#x7535;&#x5F71;&#x5206;&#x7C7B;&#x6807;&#x9898;</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第6章 构建新闻详情页面">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第7章 开始制作电影资讯页面","level":"1.8","depth":1,"previous":{"title":"第6章 构建新闻详情页面","level":"1.7","depth":1,"path":"06.md","ref":"06.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"07.md","mtime":"2017-12-14T09:57:08.629Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-12-14T09:57:56.131Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
