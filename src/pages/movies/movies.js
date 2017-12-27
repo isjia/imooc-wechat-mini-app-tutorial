@@ -34,7 +34,6 @@ Page({
         "Content-Type": "json"
       },
       success: function (res) {
-        console.log(res.data);
         _this.parseMoviesData(res.data, idx);
       }
     })
@@ -61,6 +60,13 @@ Page({
     this.setData({
       movieLists: movieLists
     }) 
+  },
+
+  // 跳转到更多页面
+  onMoreTap: function(event) {
+    wx.navigateTo({
+      url: './movie-list/movie-list?category='+event.currentTarget.dataset.category,
+    })
   },
 
   /**

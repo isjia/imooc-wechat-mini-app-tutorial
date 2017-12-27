@@ -14,7 +14,7 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-var convertToStarArray = function(star){
+const convertToStarArray = function(star){
   var stars = [0,0,0,0,0];
   var starNum = star.toString().substring(0, 1);
   for (var i = 0; i < starNum; i++){
@@ -26,7 +26,22 @@ var convertToStarArray = function(star){
   return stars;
 }
 
+const getMovies = function(url, start, count, cb) {
+  var getMoviesUrl = url + '?start=' + start + '&count=' + count;
+  wx.request({
+    url: getMoviesUrl,
+    method: 'GET',
+    header: {
+      "Content-Type": "json"
+    },
+    success: function (res) {
+      cb(res.data);
+    }
+  })
+}
+
 module.exports = {
   formatTime: formatTime,
-  convertToStarArray: convertToStarArray
+  convertToStarArray: convertToStarArray,
+  getMovies: getMovies
 }

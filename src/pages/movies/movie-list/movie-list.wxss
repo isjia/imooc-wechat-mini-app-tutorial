@@ -1,0 +1,6 @@
+/* pages/movies/movie-list/movie-list.wxss */
+@import '../movie-grid/movie-grid-template.wxss';
+
+.movie-list-container {
+  margin: 20rpx auto;
+}

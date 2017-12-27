@@ -1,0 +1,9 @@
+@import '../movie/movie-template.wxss';
+
+.movies {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start; 
+  /* height: 1300rpx;
+  float: left; */
+}
