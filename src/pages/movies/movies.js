@@ -7,7 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    movieLists: []
+    movieLists: [],
+    showSearchPanel: false,
+    searchResultList: {}
   },
 
   /**
@@ -69,6 +71,34 @@ Page({
     })
   },
 
+  // 当search input 聚焦
+  onSearchFocus: function(event) {
+    console.log("search focus");
+    this.setData({
+      showSearchPanel: true
+    })
+  },
+
+  // 当search 提交以后出发
+  onSearchConfirm: function (event) {
+    console.log("search: " + event.detail.value);
+    this.data.searchResultList = {};
+    var keyWords = event.detail.value;
+    var url = baseUrl + '/v2/movie/search?q=' + keyWords;
+    this.getSearchResults(url, 0, 18, 'searchResultList');
+    this.setData({
+      currentPosition: 18,
+      searchUrl: url
+    });
+  },
+
+  onSearchCancel: function(event) {
+    console.log("search cancel");
+    this.setData({
+      showSearchPanel: false
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -108,7 +138,19 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    var start = this.data.currentPosition;
+    var count = 9;
+    console.log('search start: ' + start);
+    if (start < this.data.searchResultList.total) {
+      this.getSearchResults(this.data.searchUrl, start, count, 'searchResultList');
+      wx.showNavigationBarLoading();
+      this.setData({
+        currentPosition: start + count
+      })
+    }
+    else {
+      console.log("到底了......");
+    }
   },
 
   /**
@@ -116,5 +158,50 @@ Page({
    */
   onShareAppMessage: function () {
     
-  }
+  },
+
+  // 获取豆瓣电影的搜索结果
+  getSearchResults: function (url, start, count, obj) {
+    var _this = this;
+    var getMoviesUrl = url + '&start=' + start + '&count=' + count;
+    wx.request({
+      url: getMoviesUrl,
+      method: 'GET',
+      header: {
+        "Content-Type": "json"
+      },
+      success: function (res) {
+        _this.parseSearchResultsData(res.data, obj);
+        wx.hideNavigationBarLoading();
+      }
+    })
+  },
+
+  // 预处理豆瓣获取到的movie信息
+  parseSearchResultsData: function (data, obj) {
+    var results = {};
+    if (this.data.searchResultList.movies){
+      results = this.data.searchResultList;      
+    }
+    else {
+      results = {
+        movies: [],
+        title: data.title,
+        total: data.total
+      };
+    }
+
+    data.subjects.forEach(function (item) {
+      var movie = {
+        cover: item.images.large,
+        name: item.title,
+        stars: util.convertToStarArray(item.rating.stars),
+        average: item.rating.average
+      }
+      results.movies.push(movie);
+    })
+    this.setData({
+      [obj]: results
+    })
+  },
 })

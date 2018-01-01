@@ -1,6 +1,15 @@
 <import src="./movie-row/movie-row-template" />
-<view>
+<import src="./movie-grid/movie-grid-template" />
+<view class="searchBar">
+  <icon type="search" size="18" class="search-icon" />
+  <input class="search-input" placeholder="芳华 妖猫传" bindfocus="onSearchFocus" bindconfirm="onSearchConfirm"/>
+  <icon type="cancel" size="24" class="clear-icon" wx:if="{{showSearchPanel}}" catchtap='onSearchCancel'/>
+</view>
+<view wx:if="{{!showSearchPanel}}">
   <block wx:for="{{movieLists}}" wx:for-item="movieList" wx:key="">
     <template is="movieRowTemplate" data="{{movieList}}"/>
   </block>
+</view>
+<view class="searchPanel" wx:if="{{showSearchPanel}}">
+  <template is="movieGridTemplate" data="{{movieList: searchResultList}}"/>
 </view>

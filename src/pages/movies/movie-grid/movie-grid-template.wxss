@@ -4,6 +4,5 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start; 
-  /* height: 1300rpx;
-  float: left; */
+  padding-top: 20rpx;
 }

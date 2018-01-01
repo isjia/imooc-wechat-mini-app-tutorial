@@ -1,7 +1,7 @@
 <import src="../movie/movie-template" />
 
 <template name="movieGridTemplate">
-  <view class='movies'>
+  <view class='movies'> 
     <block wx:for="{{movieList.movies}}" wx:for-item="movie" wx:key="">
       <template is="movieTemplate" data="{{...movie}}"/>
     </block>
