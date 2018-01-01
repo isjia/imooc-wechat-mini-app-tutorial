@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第5章 小程序的模板化与模块化 · GitBook</title>
+        <title>第8章 更多电影及电影搜索页面的实现 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="06.html" />
+    <link rel="next" href="09.html" />
     
     
-    <link rel="prev" href="04.html" />
+    <link rel="prev" href="07.html" />
     
 
     </head>
@@ -154,7 +154,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="05.html">
+        <li class="chapter " data-level="1.6" data-path="05.html">
             
                 <a href="05.html">
             
@@ -193,7 +193,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="08.html">
+        <li class="chapter active" data-level="1.9" data-path="08.html">
             
                 <a href="08.html">
             
@@ -249,7 +249,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >第5章 小程序的模板化与模块化</a>
+        <a href="." >第8章 更多电影及电影搜索页面的实现</a>
     </h1>
 </div>
 
@@ -264,13 +264,33 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B2C;5&#x7AE0;-&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x6A21;&#x677F;&#x5316;&#x4E0E;&#x6A21;&#x5757;&#x5316;">&#x7B2C;5&#x7AE0; &#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x6A21;&#x677F;&#x5316;&#x4E0E;&#x6A21;&#x5757;&#x5316;</h1>
-<h2 id="5-1-&#x5C06;&#x4E1A;&#x52A1;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5206;&#x79BB;&#x5230;&#x5355;&#x72EC;&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x4E2D;">5-1 &#x5C06;&#x4E1A;&#x52A1;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5206;&#x79BB;&#x5230;&#x5355;&#x72EC;&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x4E2D;</h2>
+                                <h1 id="&#x7B2C;8&#x7AE0;-&#x66F4;&#x591A;&#x7535;&#x5F71;&#x53CA;&#x7535;&#x5F71;&#x641C;&#x7D22;&#x9875;&#x9762;&#x7684;&#x5B9E;&#x73B0;">&#x7B2C;8&#x7AE0; &#x66F4;&#x591A;&#x7535;&#x5F71;&#x53CA;&#x7535;&#x5F71;&#x641C;&#x7D22;&#x9875;&#x9762;&#x7684;&#x5B9E;&#x73B0;</h1>
+<h2 id="8-1-&#x66F4;&#x591A;&#x7535;&#x5F71;&#x9875;&#x9762;&#x7684;&#x7F16;&#x5199;&#x601D;&#x8DEF;&#x4E0E;&#x7535;&#x5F71;&#x7C7B;&#x578B;&#x83B7;&#x53D6;">8-1 &#x66F4;&#x591A;&#x7535;&#x5F71;&#x9875;&#x9762;&#x7684;&#x7F16;&#x5199;&#x601D;&#x8DEF;&#x4E0E;&#x7535;&#x5F71;&#x7C7B;&#x578B;&#x83B7;&#x53D6;</h2>
 <ul>
-<li>alt + shift + F &#x53EF;&#x4EE5;&#x683C;&#x5F0F;&#x5316;&#x683C;&#x5F0F;</li>
+<li>&#x4F7F;&#x7528;&#x5FEB;&#x6377;&#x65B9;&#x6CD5;&#x5FEB;&#x901F;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#xFF08;&#x5728;app.json&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;page&#xFF09;</li>
+<li>&#x6DFB;&#x52A0;Tap&#x65B9;&#x6CD5;&#xFF0C;&#x5B9E;&#x73B0;&#x8DF3;&#x8F6C;&#x6548;&#x679C;,&#x5E76;&#x4F20;&#x9012;&#x9875;&#x9762;&#x53C2;&#x6570;</li>
+<li>&#x663E;&#x793A;&#x66F4;&#x591A;&#x7535;&#x5F71;&#x9875;&#x9762;&#xFF0C;&#x5E76;&#x83B7;&#x53D6;&#x5230;&#x8DEF;&#x7531;&#x53C2;&#x6570;</li>
 </ul>
-<h2 id="5-2-&#x4F7F;&#x7528;require&#x65B9;&#x6CD5;&#x52A0;&#x8F7D;js&#x6A21;&#x5757;&#x6587;&#x4EF6;">5-2 &#x4F7F;&#x7528;require&#x65B9;&#x6CD5;&#x52A0;&#x8F7D;js&#x6A21;&#x5757;&#x6587;&#x4EF6;</h2>
-<h2 id="5-3-template&#x6A21;&#x677F;&#x7684;&#x4F7F;&#x7528;">5-3 template&#x6A21;&#x677F;&#x7684;&#x4F7F;&#x7528;</h2>
+<h2 id="8-2-&#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x5BFC;&#x822A;&#x680F;&#x6807;&#x9898;">8-2 &#x52A8;&#x6001;&#x8BBE;&#x7F6E;&#x5BFC;&#x822A;&#x680F;&#x6807;&#x9898;</h2>
+<ul>
+<li>onLoad &#x4E2D;&#x4E0D;&#x5E94;&#x8BE5;&#x5904;&#x7406;&#x4E0E;UI&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;</li>
+<li>onReady&#x4E2D;&#x5904;&#x7406; <code>wx.setNavigationBarTitle()</code></li>
+</ul>
+<h2 id="8-3-&#x66F4;&#x591A;&#x7535;&#x5F71;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x6570;&#x636E;">8-3 &#x66F4;&#x591A;&#x7535;&#x5F71;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x6570;&#x636E;</h2>
+<h2 id="8-4-&#x5B9E;&#x73B0;movie-grid-template">8-4 &#x5B9E;&#x73B0;movie-grid template</h2>
+<h2 id="8-5-&#x5B9E;&#x73B0;&#x4E0A;&#x6ED1;&#x52A0;&#x8F7D;&#x66F4;&#x591A;&#x6570;&#x636E;">8-5 &#x5B9E;&#x73B0;&#x4E0A;&#x6ED1;&#x52A0;&#x8F7D;&#x66F4;&#x591A;&#x6570;&#x636E;</h2>
+<p><strong>scroll view</strong></p>
+<ul>
+<li>&#x7ED1;&#x5B9A;&#x4E0A;&#x5212;&#x4E8B;&#x4EF6;</li>
+<li>&#x8BBE;&#x7F6E;<code>scroll view</code> height</li>
+</ul>
+<h2 id="8-6-&#x8BBE;&#x7F6E;loading&#x72B6;&#x6001;">8-6 &#x8BBE;&#x7F6E;loading&#x72B6;&#x6001;</h2>
+<ul>
+<li><code>wx.showNavigationBarLoading();</code></li>
+<li><code>wx.hideNavigationBarLoading();</code></li>
+</ul>
+<h2 id="8-7-&#x5B9E;&#x73B0;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#x6570;&#x636E;">8-7 &#x5B9E;&#x73B0;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#x6570;&#x636E;</h2>
+<h2 id="8-8-backgroundcolor-&#x5230;&#x5E95;&#x8BBE;&#x7F6E;&#x7684;&#x662F;&#x54EA;&#x91CC;&#x7684;&#x989C;&#x8272;">8-8 backgroundColor &#x5230;&#x5E95;&#x8BBE;&#x7F6E;&#x7684;&#x662F;&#x54EA;&#x91CC;&#x7684;&#x989C;&#x8272;</h2>
 
                                 
                                 </section>
@@ -298,12 +318,12 @@
 
             
                 
-                <a href="04.html" class="navigation navigation-prev " aria-label="Previous page: 第4章 第二个页面：新闻阅读列表">
+                <a href="07.html" class="navigation navigation-prev " aria-label="Previous page: 第7章 开始制作电影资讯页面">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="06.html" class="navigation navigation-next " aria-label="Next page: 第6章 构建新闻详情页面">
+                <a href="09.html" class="navigation navigation-next " aria-label="Next page: 第9章 构建电影详情页面">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -314,7 +334,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第5章 小程序的模板化与模块化","level":"1.6","depth":1,"next":{"title":"第6章 构建新闻详情页面","level":"1.7","depth":1,"path":"06.md","ref":"06.md","articles":[]},"previous":{"title":"第4章 第二个页面：新闻阅读列表","level":"1.5","depth":1,"path":"04.md","ref":"04.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"05.md","mtime":"2017-11-30T14:17:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-01-01T06:56:05.325Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第8章 更多电影及电影搜索页面的实现","level":"1.9","depth":1,"next":{"title":"第9章 构建电影详情页面","level":"1.10","depth":1,"path":"09.md","ref":"09.md","articles":[]},"previous":{"title":"第7章 开始制作电影资讯页面","level":"1.8","depth":1,"path":"07.md","ref":"07.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"08.md","mtime":"2017-12-27T13:19:08.194Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-01-01T06:56:05.325Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
