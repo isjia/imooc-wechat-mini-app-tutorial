@@ -68,6 +68,15 @@ Page({
   
   },
 
+  /*查看图片*/
+  viewMoviePostImg: function (e) {
+    var src = e.currentTarget.dataset.src;
+    wx.previewImage({
+      current: src, // 当前显示图片的http链接
+      urls: [src] // 需要预览的图片http链接列表
+    })
+  },
+
   // 获取单条电影条目
   getMovie: function(id, cb){
     var url = baseUrl + '/v2/movie/subject/' + id;

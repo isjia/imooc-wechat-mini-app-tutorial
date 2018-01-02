@@ -71,7 +71,8 @@ Page({
         cover: item.images.large,
         name: item.title,
         stars: util.convertToStarArray(item.rating.stars),
-        average: item.rating.average
+        average: item.rating.average,
+        movieId: item.id
       }
       movieList.movies.push(movie);
     })
@@ -163,5 +164,13 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+
+  // 点击电影，跳转到电影详情页
+  onMoiveTap: function (event) {
+    console.log('movie id: ' + event.currentTarget.dataset.movieId);
+    wx.navigateTo({
+      url: '../movie-detail/movie-detail?id=' + event.currentTarget.dataset.movieId,
+    })
+  },
 })
