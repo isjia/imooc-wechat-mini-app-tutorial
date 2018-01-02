@@ -54,6 +54,13 @@ Page({
       g.g_isPlaying = false;
     })
 
+    wx.onBackgroundAudioStop(function () {
+      _this.setData({
+        isPlaying: false
+      })
+      g.g_isPlaying = false;
+    })
+
     if(g.g_isPlaying && g.g_musicId === _this.data.post.postId){
        _this.setData({
          isPlaying: true

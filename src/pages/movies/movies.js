@@ -53,7 +53,8 @@ Page({
         cover: item.images.large,
         name: item.title,
         stars: util.convertToStarArray(item.rating.stars),
-        average: item.rating.average
+        average: item.rating.average,
+        movieId: item.id
       }
       movieList.movies.push(movie);
     })
@@ -76,6 +77,14 @@ Page({
     console.log("search focus");
     this.setData({
       showSearchPanel: true
+    })
+  },
+
+  // 点击电影，掉转到电影详情页
+  onMoiveTap: function(event) {
+    console.log('movie id: ' + event.currentTarget.dataset.movieId);
+    wx.navigateTo({
+      url: './movie-detail/movie-detail?id=' + event.currentTarget.dataset.movieId,
     })
   },
 
@@ -196,7 +205,8 @@ Page({
         cover: item.images.large,
         name: item.title,
         stars: util.convertToStarArray(item.rating.stars),
-        average: item.rating.average
+        average: item.rating.average,
+        movieId: item.id
       }
       results.movies.push(movie);
     })
